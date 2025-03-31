@@ -1,0 +1,73 @@
+[
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "hmac",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hmac",
+        "description": "hmac",
+        "detail": "hmac",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "qrcode",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "qrcode",
+        "description": "qrcode",
+        "detail": "qrcode",
+        "documentation": {}
+    },
+    {
+        "label": "generate_config",
+        "importPath": "m350",
+        "description": "m350",
+        "isExtraImport": true,
+        "detail": "m350",
+        "documentation": {}
+    },
+    {
+        "label": "generate_config",
+        "kind": 2,
+        "importPath": "m350",
+        "description": "m350",
+        "peekOfCode": "def generate_config(\n        config_params,\n        config_pri: bytes = \"___VBAR_CONFIG_V1.1.0___\".encode('utf-8'),\n        password: bytes = os.getenv(\"PASSWORD\", \"1234567887654321\").encode('utf-8'),\n):\n    \"\"\"\n    Generates a secure configuration string by combining configuration parameters with\n    a cryptographic signature. The method encodes configuration data, computes an HMAC\n    digest using a secret password, and generates a base64 encoded signature.\n    Args:",
+        "detail": "m350",
+        "documentation": {}
+    },
+    {
+        "label": "generate_qrcode",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def generate_qrcode(text, file_path=None, version=4, error_correction=qrcode.constants.ERROR_CORRECT_L, box_size=10,\n                    border=4, fill_color=\"black\", back_color=\"white\"):\n    \"\"\"\n    Generates a QR code from the given text and saves or returns the generated image.\n    This function creates a QR code using customizable parameters such as size, error\n    correction level, colors, and border size. The image is then returned or optionally\n    saved to the specified file path.\n    Args:\n        text (str): The textual data to encode within the QR code.\n        file_path (Optional[str]): The file path to save the generated QR code image.",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main(device_name=\"vguang-m350\"):\n    \"\"\"\n    Generates device-specific configuration, QR code data, and saves it as a QR code image.\n    The function takes a device name, validates its characters to ensure they are ASCII,\n    constructs a configuration dictionary specific to the device, and subsequently generates\n    a configuration string and QR code based on the provided configuration. The QR code image\n    is saved to the current working directory.\n    Args:\n        device_name (str): The name of the device. Must contain only ASCII characters. Defaults to \"vguang-m350\".\n    Raises:",
+        "detail": "main",
+        "documentation": {}
+    }
+]
